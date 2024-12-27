@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодний Календарь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="left-block">
+           
+        </div>
+        <div class="right-block">
+            <video autoplay loop muted>
+                <source src="video.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>С Наступающим Новым Годом!</h1>
+        <div class="countdown">
+            <h2>Обратный отсчет до Нового года:</h2>
+            <div id="timer">
+                <span id="days"></span> дней,
+                <span id="hours"></span> часов,
+                <span id="minutes"></span> минут,
+                <span id="seconds"></span> секунд
+            </div>
+        </div>
+        <div class="calendar">
+            <div id="calendar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        video.playbackRate = 0.7;
+    </script>
+</body>
+</html>
