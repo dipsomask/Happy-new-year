@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.background-container {
+    display: flex;
+    height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.left-block {
+    width: 33.33%; /* Занимает 1/3 ширины */
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный фон для наглядности */
+}
+
+.left-block img {
+    width: 100%; /* Изображение занимает всю ширину блока */
+    height: auto; /* Сохраняет пропорции изображения */
+}
+
+.right-block {
+    width: 66.67%; /* Занимает 2/3 ширины */
+    position: relative; /* Для позиционирования видео */
+}
+
+.right-block video {
+    width: 70%; /* Видео занимает всю ширину блока */
+    height: 70%; /* Видео занимает всю высоту блока */
+    object-fit:cover; /* Обрезает видео по размеру блока */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.712); /* Легкая тень для эффекта */
+    transform: translate(20%, 20%); /* Центрирует контейнер по горизонтали и вертикали */
+}
+
+.container {
+    position: absolute; /* Позволяет размещать контейнер поверх фоновых блоков */
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-95%, -40%); /* Центрирует контейнер по горизонтали и вертикали */
+    background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный фон для читаемости текста */
+    color: #918864;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Легкая тень для эффекта */
+}
+
+.calendar {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #F2F2EF; /* Полупрозрачный фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 колонок для дней недели */
+    gap: 10px; /* Промежуток между ячейками */
+}
+
+.day {
+    padding: 20px;
+    background-color: #DED3A6; /* цвет для ячеек */
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff; /* Цвет текста */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.day:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.holiday {
+    background-color: #ff4500; /* Красный цвет для праздничных дней */
+}
+
+.today {
+    background-color: #F2F2EF; /*  цвет для выделения текущей даты */
+    color: #918864; /* Цвет текста */
+    border: 2px solid #fff; /* Белая рамка вокруг выделенной даты */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Легкая тень для эффекта */
+}
+
+
